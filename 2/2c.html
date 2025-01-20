@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        h1,h3{
+           text-align: center;
+           margin-left: 80px;
+        }
+        .a{
+            display: inline-block;
+            margin-left: 850px;
+        }
+        .b{
+            display: inline-block;
+            margin-left: 30px;
+           
+        }
+        table{
+            margin-left: 700px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        #c{
+            background-color: aqua;
+        }
+        #d{
+            background-color: aquamarine;
+        }
+        th{
+            background-color: antiquewhite;
+        }
+    </style>
+    <div>
+    <h1>Registration Form</h1>
+    <h3>Fill Your Details</h3>
+    <form>
+        
+        <table border="1" width="500px" height="500px">
+            <tr>
+                <th>Full Name:</th>
+                <td>
+                    <input type="text" placeholder="Enter your full name">
+                </td>
+            </tr>
+            <tr>
+                <th>Password:</th>
+                <td>
+                    <input type="password" placeholder="Enter your Password">
+                </td>
+            </tr>
+            <tr>
+                <th>Age:</th>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <th>Date of Birth:</th>
+                <td>
+                    <input type="date">
+                </td>
+            </tr>
+            <tr>
+                <th>Gender:</th>
+                <td>
+                    <input type="radio" name="Gender" value="male">male
+                    <input type="radio" name="Gender" value="female">female
+                    <input type="radio" name="Gender" value="other">Other
+                </td>
+            </tr>
+            <tr>
+                <th>Hobbies:</th>
+                <td>
+                    <input type="checkbox" name="Hobbies" value="Reading">Reading
+                    
+                    <input type="checkbox" name="Hobbies" value="Sports">Sports
+                    
+                    <input type="checkbox" name="Hobbies" value="Travelling">Travelling
+                </td>
+                
+            </tr>
+            <tr>
+                <th>Country:</th>
+                <td>
+                    <select name="Country"> 
+                        <option value="" selected>Select the Country</option>
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="UK">UK</option>
+                        <option value="Australia">Australia</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>About Yourself</th>
+                <td>
+                    <textarea name="about" placeholder="write about yourself...."></textarea>
+                </td>
+            </tr>
+
+
+        </table>
+        <br>
+        <div class="a">
+        <input type="submit" value="submit" id="c">
+        
+        </div>
+        <div class="b">
+            <input type="reset" value="reset" id="d">
+        </div>
+    </form>
+    </div>
+</body>
+</html>
