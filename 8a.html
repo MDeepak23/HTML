@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <h2>Largest of three numbers</h2>
+    <button onclick="largest()">enter</button>
+    <div id="result">click</div>
+
+    <script>
+        function largest(){
+            let a = parseInt(prompt("enter a"))
+            let b = parseInt(prompt("enter b"))
+            let c = parseInt(prompt("enter c"))
+            if(isNaN(a)|| isNaN(b) || isNaN(c)){
+                document.getElementById("result").innerHTML="enter valid numbers";
+                return;
+            }
+            let d;
+            if(a==b==c){
+                document.getElementById("result").innerHTML="Same numbers";
+            }
+            else
+             {
+                 d = Math.max(a,b,c);
+            }
+            document.getElementById("result").innerHTML= d;
+            alert(d);
+            return;
+        }
+    </script>
+</body>
+</html>
