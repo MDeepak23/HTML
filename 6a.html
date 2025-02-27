@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="6a.js"></script>
+    <style>
+        button{
+            background-color: pink;
+            border: none;
+            padding:17px;
+            border-radius: 10%;
+            color: black;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Embedding Example</h1>
+    <p id="A">This text will change using internal JavaScript</p>
+    <button onClick="internal()">Change text(internal js)</button>
+    <p id="B">This text will change using external JavaScript</p>
+    <button onClick="external()">Change text(external js)</button>
+    <script>
+        function internal(){
+           document.getElementById("A").innerHTML = "hello everyone"
+        }
+    </script>
+</body>
+</html>
