@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        button{
+            background-color: teal;
+            padding: 20px;
+            animation-name: example;
+            animation-duration: 7s;
+            border-radius: 15px;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        @keyframes example{
+            from {background-color: teal;}
+            to {background-color: red;}
+        }
+    </style>
+</head>
+<body>
+    <h1>voting eligibility</h1>
+    <Button onclick="check()">click </Button>
+    <script>
+        function check(){
+        var name = prompt("enter the name:")
+        var age = parseInt(prompt("enter age:"))
+        let eligibility = (age>18)?"Yes":"No";
+        let color = (eligibility=="Yes")?"green":"red";
+        document.write(`
+         <table border="1" style="border-collapse:collapse;">
+            <tr>
+                <th>NAME</th>
+                <th>AGE</th>
+                <th>ELigibility</th>
+            </tr>
+            <tr>
+                <td>${name}</td>
+                <td>${age}</td>
+                <td style= "color: ${color}">${eligibility}</td>
+             </tr>
+             </table>
+        `)
+            }
+    </script>
+</body>
+</html>
