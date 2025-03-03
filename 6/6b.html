@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        button{
+          background-color: teal;
+          padding: 15px;
+          margin-left: 15px;
+        }
+        button {
+    
+            animation-name: color;
+            animation-duration: 4s;
+        }
+        @keyframes color{
+            from {background-color: teal;}
+            to {background-color: yellow;}
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Output Methods</h1>
+    <button onclick="Alert()">show Alert</button>
+    <button onclick="writetoDocument()">Write to Document</button>
+    <button onclick="Console()">Log to console</button>
+    <button onclick="UpdateInner()">Update Inner Html</button>
+    <p id="A">Hello Everyone</p>
+    <script>
+        function Alert(){
+             alert("alert box");
+        }
+        function writetoDocument(){
+            document.write("this msg is written using document.write()");
+        }
+        function Console(){
+            console.log("this msg is wriiten using console.log()")
+        }
+        function UpdateInner(){
+            document.getElementById("A").innerHTML = "Myself Deepak"
+        }
+    </script>
+</body>
+</html>
