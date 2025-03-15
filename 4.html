@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        h2{
+            text-align: left;
+        }
+       #A{
+        color:red;
+       }
+       .B{
+        background-color: yellow;
+       }
+       div p{
+        color: rgb(1, 70, 12);
+       }
+       div > p{
+        font-weight: bold;
+       }
+       div + p{
+         color: orange;
+       }
+       div ~ p{
+         font-style: italic;
+       }
+       a:hover{
+        color: rgb(202, 15, 226);
+       }
+       P:first-child{
+        background-color: lightblue;
+       }
+       P::first-letter{
+        color: brown;
+        font-size: 20px;
+       }
+       p::after{
+        content: "(Read more...)";
+        color: gray;
+       }
+       input:focus{
+         border: 5px solid blueviolet;
+       }
+       [title]{
+        text-decoration: underline;
+        color: orange;
+       }
+       input[type="text"]{
+        border: 3px solid lightgreen
+       }
+       
+    </style>
+</head>
+<body>
+    <h2>Simple selector</h1>
+    <p id="A">This is an ID selector example.</p>
+    <p class="B">This is an CLASS selector example.</p>
+    <br>
+    <h2>Combinator selector</h1>
+    <div>
+       <p>This paragraph inside a div(descendant selector).</p>
+       <p>This paragraph inside a div(child selector).</p>
+    </div>
+    <P>This pagraph after div(sibling)</P>
+    <P>This pagraph after div(subsequent sibling)</P>
+    <h2>Pseudo-Class & Pseudo-Element Selectors</h1>
+    <a href="#">Hover over the link</a>
+    <p>First letter is styled with a pseudo element</p>
+    <input type="text" placeholder="click here and see">
+    <h2>Attribute selector</h1>
+     <p title="FSD">This paragraph has a title attribute</p>
+    <input type="text" placeholder="styled input field">
+
+
+</body>
+</html>
