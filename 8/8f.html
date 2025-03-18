@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Denomination calculator</h1>
+    <div>
+        <button onclick="Deno()">Click here</button>
+        <p id="A">click on a button to get the denomination</p>
+    </div>
+    <script>
+        function Deno(){
+        const deno = [100,50,10,2,1];
+        let amt = parseInt(prompt("enter the amount:"));
+        let remaining = amt;
+        let result = {}
+        for(let i of deno){
+            if(i<=remaining){
+                let count = Math.floor(remaining/i);
+                result[i] = count;
+                remaining %=i;
+            }
+       }
+       let ans =`For RS ${amt} the denominations are<br>`;
+       for(let i in result){
+        ans+= `${result[i]} - ${i} <br>`;
+       }
+       console.log(ans);
+       document.getElementById("A").innerHTML=ans;
+        }
+    </script>
+</body>
+</html>

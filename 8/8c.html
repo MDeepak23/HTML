@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+            font-weight: bolder;
+            
+        }
+        div{
+            display: flex;
+            gap: 20px;
+            font-size: larger;
+            margin-left: 39vw;
+        }
+        p{
+           padding: 10px;
+           background-color: gray;
+           border: 3px solid black;
+        }
+        #B{
+            background-color: brown;
+        }
+        #C{
+            background-color: rgb(4, 93, 218);
+        }
+        #D{
+            background-color: darkgreen;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>display 1-10 numbers</h1>
+    <div class="A">
+    <button id="B" onclick="forloop()">FOR LOOP</button>
+    <button id="C" onclick="whileloop()">WHILE LOOP</button>
+    <button id="D" onclick="dowhileloop()">DO WHILE LOOP</button>
+    <p id="result">click on above</p>
+    </div>
+    
+    <script>
+        function forloop() {
+            let a="";
+             for(let i=1;i<=10;i++){
+               a += i+" ";
+             }
+             document.getElementById("result").innerHTML=`using for loop: <br>${a}`;
+        }
+        
+        function whileloop() {
+            let b = "";
+            let i=1;
+            while(i<=10){
+                b += i+" ";
+                i++;
+            }
+            document.getElementById("result").innerHTML = `using while loop: <br>${b}`;
+
+            
+        }
+        function dowhileloop() {
+            let c = "";
+            let i=1;
+            do{
+                c += i+" ";
+                i++;
+            }while(i<=10);
+            document.getElementById("result").innerHTML = `using do while loop: <br>${c}`;
+
+            
+        }
+    </script>
+</body>
+</html>

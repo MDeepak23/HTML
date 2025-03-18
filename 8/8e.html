@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-align: center;
+            font-weight: bolder;
+        }
+        div{
+            display: flex;
+            gap: 20px;
+            margin-left: 40vw;
+            font-size: larger;
+        }
+        p{
+            background-color: gray;
+            padding:10px;
+            border: 3px solid black;
+        }
+        button{
+            padding: 10px 25px 10px 25px;
+            font-size: large;
+            border: 3px solid black;
+            background-color: brown;
+            cursor: pointer;
+            
+        }
+        @k
+    </style>
+</head>
+<body>
+   <h1>Arm strong number</h1>
+   <div>
+    <button onclick="isArmstrong()">click here</button>
+    <p id="A">click on a button to check for arm strong number</p>
+   </div>
+   <script>
+    function isArmstrong(){
+        let a= parseInt(prompt("enter a number:"));
+        var num = a,n =a,count=0;
+        while(num!=0){
+          num = Math.floor(num/10);
+          count++;
+        }
+        
+        let rem,sum=0;
+        console.log(n);
+        while(n!=0){
+         rem = n%10;
+         sum+=Math.pow(rem,count);
+         n = Math.floor(n/10);
+        }
+        console.log(rem);
+        let reply="";
+        if(a == sum){
+          reply=a + " is a armstrong number";
+        }
+        else{
+            reply = a +" is not a armstrong number";
+        }
+        document.getElementById("A").innerHTML=`${reply}`;
+       }
+   </script>
+</body>
+</html>
